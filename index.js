@@ -7,7 +7,7 @@ require("dotenv").config();
 
 // Initialize the app
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 // Middleware
 app.use(bodyParser.json());
@@ -15,7 +15,7 @@ app.use(cors());
 
 // MongoDB connection
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect(process.env.URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
