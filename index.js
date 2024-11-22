@@ -58,8 +58,9 @@ app.post("/login", async (req, res) => {
 });
 
 app.get("/", async (req, res) => {
-  return "shahriar";
+  res.send("shahriar");
 });
+
 // API route to authenticate a user
 app.post("/logins", async (req, res) => {
   const { email, password } = req.body;
